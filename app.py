@@ -10,9 +10,9 @@ st.image("wallpaper.jpg")
 
 House_size = st.number_input("Please enter your House Size: ")
 
-Bedrooms = st.number_input("Please enter NO of Bedrooms: ")
+Bedrooms = st.number_input("Please enter No of Bedrooms: ")
 
-if st.button("Predict"):
+if st.button("predict"):
     pranith = np.array([[House_size, Bedrooms]])
-    haha = model.Predict(pranith)
-    st.write(f"The price of the house is {pranith[0]}")
+    output = model.predict(pranith)
+    st.write(f"The price of the house is {output[0]}")
